@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Princess Kshitija 👑</title>
+<style>
+  body {
+    background: radial-gradient(circle at top, #ffe6f7, #e4c6ff, #f7d6ff);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    padding: 28px 20px 30px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.5s ease;
+  }
+  .photo-frame {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 14px;
+    border: 3px solid #ff7fbf;
+    box-shadow: 0 0 18px rgba(255, 105, 180, 0.7);
+  }
+  .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  h1 {
+    font-size: 1.9rem;
+    color: #b30059;
+    margin: 6px 0 4px;
+  }
+  h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6b006b;
+    margin: 0 0 10px;
+  }
+  p {
+    font-size: 0.98rem;
+    color: #4a004d;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .flowers {
+    margin: 8px 0 14px;
+  }
+  .flower {
+    font-size: 1.9rem;
+    margin: 0 5px;
+    animation: float 3s infinite ease-in-out;
+  }
+  .glow {
+    animation: float 3s infinite ease-in-out, glow 1.6s ease-in-out infinite alternate;
+  }
+  .btn {
+    background: linear-gradient(135deg, #ff4b9a, #ff7ad9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    box-shadow: 0 10px 20px rgba(255, 77, 148, 0.45);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s;
+  }
+  .btn:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 6px 12px rgba(255, 77, 148, 0.32);
+  }
+  .btn-secondary {
+    background: linear-gradient(135deg, #b46bff, #ff9cef);
+    margin-top: 6px;
+  }
+  .hidden { display: none; }
+  .from-text {
+    font-size: 0.85rem;
+    margin-top: 12px;
+    color: #7a0066;
+  }
+  .music-box {
+    margin-top: 14px;
+    font-size: 0.9rem;
+  }
+  .music-box iframe {
+    margin-top: 6px;
+    border-radius: 12px;
+    border: none;
+    width: 100%;
+    max-width: 320px;
+    height: 180px;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 6px rgba(255,105,180,0.6), 0 0 14px rgba(186,85,211,0.6); }
+    to { text-shadow: 0 0 10px rgba(255,182,193,0.9), 0 0 22px rgba(147,112,219,0.9); }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="photo-frame">
+    <!-- Make sure this file is in the same folder as the HTML -->
+    <img src="image0.png" alt="Princess Kshitija">
+  </div>
+
+  <h1>👑 Happy Princess Day, Kshitija 👑</h1>
+  <h2>Today the roses & orchids chose you as their queen 🌹💜🌺</h2>
+
+  <div class="flowers" id="flowers">
+    <span class="flower">🌹</span>
+    <span class="flower">💜</span>
+    <span class="flower">🌺</span>
+    <span class="flower">🌹</span>
+  </div>
+
+  <p id="msg1" class="hidden">
+    In a world full of people, you stand out like the prettiest rose in a garden of orchids – soft, rare and a little bit magical.
+    I don't say it all the time, but I genuinely love talking to you, and you make my day feel lighter just by being in it.
+  </p>
+
+  <p id="msg2" class="hidden">
+    So, on this Princess Day, consider this a small reminder: you deserve gentle words, genuine efforts and someone who never gets tired of choosing you.
+    I don't know where this goes yet, but I'm really glad it led me to you. 💘
+  </p>
+
+  <button class="btn" id="btnMain" onclick="firstSurprise()">Tap for a Surprise ✨</button>
+  <button class="btn btn-secondary hidden" id="btnSecond" onclick="secondSurprise()">Tap again for More 💘</button>
+
+  <div class="music-box">
+    <div>Our song for today 🎵</div>
+    <!-- Your YouTube song -->
+    <iframe 
+      src="https://www.youtube.com/embed/HJG4hO_GrRI"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <p class="from-text">- From someone who thinks you're way more special than you realise 💫</p>
+</div>
+
+<script>
+  const msg1 = document.getElementById('msg1');
+  const msg2 = document.getElementById('msg2');
+  const btnMain = document.getElementById('btnMain');
+  const btnSecond = document.getElementById('btnSecond');
+  const flowers = document.getElementById('flowers');
+
+  function firstSurprise() {
+    msg1.classList.remove('hidden');
+    btnSecond.classList.remove('hidden');
+    btnMain.textContent = 'You unlocked the first surprise ✨';
+    btnMain.style.opacity = '0.9';
+
+    const f = flowers.querySelectorAll('.flower');
+    f.forEach(el => el.classList.add('glow'));
+  }
+
+  function secondSurprise() {
+    msg2.classList.remove('hidden');
+    btnSecond.textContent = "That's all… for now 💗";
+  }
+</script>
+
+</body>
+</html>
